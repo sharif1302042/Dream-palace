@@ -1,0 +1,192 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h3>
+	</div>
+	<div class="menubar">
+		<a href="{% url 'blog/home'%}">Home</a>
+		<a href="#">Sports</a>
+		<a href="#">National</a>
+		<a href="#">International</a>
+		<a href="#">Politics</a>
+		<a href="#">Entertainment</a>
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h4 style="float: right">5 August 2018</h4>
+				<h1> লিস্ট অপারেশনস</h1>
+
+				<p>
+					পাইথনে সবচেয়ে পরিচিত একটা ডাটা টাইপ হচ্ছে লিস্ট | আসলে লিস্ট পাইথনের একটি বিল্ট-ইন ডাটা স্ট্রাকচার |
+	         সি, সি+ এ যাহাই  অ্যারে তাহাই পাইথনে লিস্ট | তবে অ্যারের চাইতে এর কিছু গুরুত্বপূর্ণ ফিচার আছে
+						 <a href="{%url 'blog/post_details2'%}"><button type="button">Read More...</button></a>
+				</p>
+
+				<h4 style="float: right">12 August 2018</h4>
+				<h1> উবুন্টুতে অভ্র ইন্সটল </h1>
+				<p>
+						প্রথমেই ধন্যবাদ দিতে হয় যাদের অক্লান্ত পরিশ্রমের ফলে অভ্র কিবোর্ড তৈরি হয়েছে |
+	          এই পর্বে আমরা জানবো উবুন্টুতে কিভাবে অভ্র ইন্সটল করা যায় (মূলত ubuntu 17 & 18)
+						 <a href="{%url 'blog/post_details6'%}"><button type="button">Read More...</button></a>
+				</p>
+
+				<h4 style="float: right">10 August 2018</h4>
+				<h1> বিল্ট ইন ফাংশন</h1>
+				<p>
+					এই পর্বে আমরা Python এর কিছু  বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+						ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+						 এবং এর সুবিশাল  লাইব্রেরী
+						 <a href="{%url 'blog/post_details5'%}"><button type="button">Read More...</button></a>
+				</p>
+
+				<h4 style="float: right">7 August 2018</h4>
+				<h1>স্ট্রিং মেথডস</h1>
+				<p>
+				<strong> s.lower(), s.upper()ঃ</strong> returns the lowercase or uppercase version of the string.
+				<strong> s.strip()ঃ</strong>  returns a string with whitespace removed from the
+				 <a href="{%url 'blog/post_details'%}"><button type="button">Read More...</button></a>
+				</p>
+
+				<h4 style="float: right">10 August 2018</h4>
+				<h1> Django ORM and QuerySets</h1>
+				<p>
+					এই পর্বে আমরা জানবো কিভাবে ডাটাবেস এর সাথে কানেক্ট করে এবং ডাটা স্টোর করে |
+						চলুন সামনে এগুই ...
+						 <a href="{%url 'blog/post_details3'%}"><button type="button">Read More...</button></a>
+				</p>
+
+
+				<h1> GIT (version Control)</h1>
+				<p>
+					এই পর্বে আমরা Python এর কিছু  বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+						ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+						 এবং এর সুবিশাল লাইব্রের
+						 <a href="{%url 'blog/post_details4'%}"><button type="button">Read More...</button></a>
+				</p>
+
+				<h1> Web Scraping</h1>
+				<p>
+					এই পর্বে আমরা Python এর কিছু  বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+						ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+						 এবং এর সুবিশাল লাইব্রের
+						 <a href="{%url 'blog/post_details7'%}"><button type="button">Read More...</button></a>
+				</p>
+
+
+
+
+
+
+
+<!--
+				<h4 style="padding-bottom: 5px">Your email address will not be published. Required fields are marked *</h4>
+				<form action="#" method="post">
+				    <div>
+				        <label for="name">Name:</label>
+				        <input type="text" id="name" />
+				    </div>
+				    <div>
+				        <label for="mail">E-mail:</label>
+				        <input type="email" id="mail" />
+				    </div>
+				    <div>
+				        <label for="msg">Message:</label>
+				        <textarea id="msg"></textarea>
+				    </div>
+
+				    <div class="button">
+				        <button type="submit">comment</button>
+				    </div>
+				</form>
+-->
+			</div>
+
+			<div class="columnn2">
+				<h2>Me</h2>
+				<div class="image">
+							<img src="{% static 'images/me1.png'%}" alt="logo">
+							<p><h3>MD shariful islam</h3>
+								Hajee Mohammad Danesh Science and Technology University
+								<br>Dept of CSE
+							</p>
+				</div>
+
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+
+				<h2>Recent Posts</h2>
+
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/post_details5'%}">বিল্ট ইন ফাংশন</a></li>
+					<li><a href="{%url 'blog/post_details6'%}">উবুন্টুতে অভ্র ইন্সটল</a></li>
+
+					<li><a href="{%url 'blog/post_details'%}">স্ট্রিং মেথডস</a></li>
+					<li><a href="{%url 'blog/post_details2'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/post_details3'%}">Django ORM</a></li>
+					<li><a href="{%url 'blog/post_details4'%}">GIT Control</a></li>
+
+				</ul>
+
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h5>
+	</div>
+	<div class="menubar">
+		<a href="{%url 'blog/home'%}">Home</a>
+		<a href="#">Sports</a>
+		<a href="#">National</a>
+		<a href="#">International</a>
+		<a href="#">Politics</a>
+		<a href="#">Entertainment</a>
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h1 style="text-align: center;"> লিস্ট অপারেশনস</h1>
+				<p>পাইথনে সবচেয়ে পরিচিত একটা ডাটা টাইপ হচ্ছে লিস্ট | আসলে লিস্ট পাইথনের একটি বিল্ট-ইন ডাটা স্ট্রাকচার |
+         সি, সি+ এ যাহাই  অ্যারে তাহাই পাইথনে লিস্ট | তবে অ্যারের চাইতে এর কিছু গুরুত্বপূর্ণ ফিচার আছে |
+				 আজকে আমাদের আলোচনার বিষয়বস্তু লিস্ট ডাটা টাইপ | 
+
+				<h3 style="font-size: 25px"> লিস্ট এর  দৈর্ঘ্য বের  করাঃ</h3>
+				<p> লিস্ট এর  দৈর্ঘ্য বের করার জন্য <strong>len(list)</strong>মেথড বেব্যহার করা হয় |
+					মেথডে লিস্টটি পাস করতে হয়  অবশেষে তা  লিস্ট এর  দৈর্ঘ্য  রিটার্ন করে  |
+					<div class="code">
+							a = [1, 2, 3, 4, 5]
+							<br>print(len(a))
+							<br>output:5
+					</div>
+				</p>
+
+
+				<h3 style="font-size: 25px">আইটেম যোগ করাঃ</h3>
+				<p>লিস্টে কোন একটা উপাদান ইন্ডেক্স যোগ করার জন্য <strong>append()</strong>মেথড বেব্যহার করা হয় |
+					মেথডে উপাদানটি পাস করতে হয়, উপদানটি লিস্ট এর শেষে যোগ হয় |
+					<div class="code">
+							a = [1, 2, 3, 4, 5]
+							<br>a.apped(10)
+							<br>print(a)
+							<br>output:[1, 2, 3, 4, 5,10]
+
+					</div>
+				</p>
+
+				<h3 style="font-size: 25px">নিরদৃষ্ট ইন্ডেক্সে আইটেম যোগ করাঃ</h3>
+				<p>লিস্টে কোন নিরদৃষ্ট ইন্ডেক্সে আইটেম যোগ করার জন্য <strong>insert(index, element)</strong>মেথড বেব্যহার করা হয় |
+				index হচ্ছে কোন ইন্ডেক্সে element/উপদানটি যোগ  হবে |
+				 উপদানটি লিস্ট এর  নিরদৃষ্ট ইন্ডেক্সে যোগ  হবে  এবং  পূর্বের উপদানটি  মুছে যাবে |
+					<div class="code">
+							a = [1, 2, 3, 4, 5]
+							<br>a.insert(3, 100)
+							<br>print(a)
+							<br>output:[1, 2, 3, 100, 5]
+
+					</div>
+				</p>
+
+				<h3 style="font-size: 25px">আইটেম গুনাগুনিঃ</h3>
+				<p>লিস্ট এ কোন একটি  আইটেম কতবার আছে তা হিসাব  করার জন্য <strong>count(element)</strong>মেথড বেব্যহার করা হয় |
+				যতবার উপাদানটি পাবে তা রিটার্ন করবেে আর  না পেলে 0 রিটার্ন করবে |
+					<div class="code">
+							a = [1, 2, 2, 3, 4, 5]
+							<br>print(a.count(2))
+							<br>output:2
+							<br>print(a.count(10))
+							<br>output:0
+
+					</div>
+				</p>
+
+
+
+
+				<h3 style="font-size: 25px"> লিস্ট যোগ করাঃ</h3>
+				<p>এক লিস্টের সাথে অন্য লিস্ট যোগ করার জন্য <strong>extend()</strong>মেথড বেব্যহার করা হয় |
+				2nd লিস্টের উপাদানগুলো 1st লিস্টের শেষে যোগ হবে, উল্লেখ্য 2nd লিস্ট অপরিবর্তিত থাকবে |
+					<div class="code">
+							lst1 = [1, 2, 3, 4, 5]
+							<br>lst2 = [10, 20, 30]
+							<br>lst1.extend(lst2)
+							<br>print(lst1)
+							<br>output:[1, 2, 3, 4, 5,10,20,30]
+					</div>
+					</p><p>
+					অন্য একটি উপায়েও এই কাজটি করা যায়.....
+					<div class="code">
+							lst1 = [1, 2, 3, 4, 5]
+							<br>lst2 = [10, 20, 30]
+							<br>lst1=lst1+lst2
+							<br>print(lst1)
+							<br>output:[1, 2, 3, 4, 5,10,20,30]
+					</div>
+				</p>
+
+
+				<h3 style="font-size: 25px"> ইন্ডেক্স খোঁজাখূজিঃ</h3>
+				<p>লিস্টে কোন একটা উপাদানের ইন্ডেক্স খুঁজে বের করার জন্য <strong>index()</strong>মেথড বেব্যহার করা হয় |
+					মেথডে উপাদানটি পাস করতে হয়, উপদানটি পেলে তার ইন্ডেক্স রিটার্ন করে অন্যথায় ValueError থ্রো করে |
+					<div class="code">
+							a = [1, 2, 3, 4, 5]
+							<br>a.index(5)
+							<br>output:4<br>
+
+							<br>a.index(7)
+							<br>Traceback (most recent call last):
+	  					<br>File "stdin", line 1, in module
+							<br>ValueError: 'p' is not in list
+					</div>
+				</p>
+
+        <h3 style="font-size: 25px"> List.reverse() মেথডের  সাহায্যে  লিস্ট উলটানোঃ </h3>
+				<p> প্রত্যেক লিস্ট এর একটা বিল্ট ইন মেথড হল   <strong>reverse()</strong> মেথড | যা কোন  লিস্ট  এর  উপাদান  গুলোকে  শুধু  উলটা  করে  দেখায়  কিন্তু  নতুন  কোন  লিস্ট   তৈরি
+                করেনা  |  শুধু  লিস্ট  টাকে  মডিফাই  করে |
+
+                <div class="code">
+                    mylist = [1, 2, 3, 4, 5]
+                    <br>mylist.reverse()
+                    <br>print(mylist)
+
+                    <br>newlist output: [5,4,2,3,1]
+                </div>
+        </p>
+
+				<h3 style="font-size: 25px"> "[::-1]" এর মাধ্যমে লিস্ট reverse করাঃ </h3>
+				<p>লিস্ট reverse করার আর একটা উপায় হল [::-1].
+ 					এটাও  লিস্ট  এর  উপাদান  গুলোকে  শুধু  উলটা  করে  দেখায়  কিন্তু  নতুন  কোন  লিস্ট   তৈরি করেনা |
+					<div class="code">
+							mylist = [1, 2, 3, 4, 5]
+							<br>mylist[::-1]
+							<br>print(mylist)
+							<br>output:[5, 4, 3, 2, 1]
+					</div>
+				</p>
+
+				<h3 style="font-size: 25px"> রিভার্স  ইটারেটর  এর মাধ্যমে লিস্ট রিভার্স করাঃ </h3>
+				<p>রিভার্স  ইটারেটরের মাধ্যমেও  আমরা কোন লিস্ট কে রিভার্স  করতে পারি |
+					এটাও নতুন কোন লিস্ট তৈরিও  করেনা পূর্বের লিস্ট এর কোন পরিবর্তনও করেনা ,
+					শুধুমাত্র  ইটারেটর জেনারেট করে লিস্ট টা দেখায় |
+					<div class="code">
+							 mylist = [1, 2, 3, 4, 5]
+							<br> for item in reversed(mylist):
+							<br> ....print(item)
+							<br>output:
+							<br>5
+							<br>4
+							<br>3
+							<br>2
+							<br>1
+							<br>print(mylist)
+							<br>output:[5, 4, 3, 2, 1]
+					</div>
+				</p>
+				<p>
+					দেখা  যাচ্ছে   পূর্বের লিস্ট এর কোন পরিবর্তন হয়নি |
+				</p>
+
+				<h3 style="font-size: 25px"> লিস্টের  উপাদান মুছে ফেলাঃ </h3>
+				<p>লিস্টের কোন উপদান মুছে ফেলার জন্য তিনটি মেথড রয়েছে <strong>remove()</strong>,<strong>del()</strong>,<strong>pop()</strong>.<br>
+				<br><strong>remove()</strong> মেথড সরাসরি  ভেলু নিয়ে কাজ করে | মেথডে ভেলু পাস করার পর যদি সে লিস্টে
+				ওই ভেলুটি পায় তাহলে মুল লিস্ট থেকে ভেলুটি মুছে দেয় অন্যথায় ValueError থ্রো করে |
+				<div class="code">
+						 a = [0, 2, 3, 2]
+						<br> a.remove(2)
+						<br> ....print(a)
+						<br>output:[0, 3, 2]
+						<br>
+						<br>a.remove(7)
+						<br>Traceback (most recent call last):
+						  <br>File "stdin", line 1, in module
+						<br>ValueError: list.remove(x): x not in list
+
+				</div>
+				</p>
+
+				<p><strong>del()</strong> মেথড ইন্ডেক্স এর ভিত্তিতে কাজ করে | মেথডে ভেলু পাস করার পর যদি সে লিস্টে ওই ভেলুটি পায় তাহলে
+					মুল লিস্ট থেকে ভেলুটি মুছে দেয় অন্যথায় IndexError থ্রো করে |
+					<div class="code">
+							 a = [3, 2, 2, 1]
+							<br> del a[1]
+							<br> print(a)
+							<br>output:[3, 2, 1]
+							<br>
+							<br>del a[7]
+							<br>Traceback (most recent call last):
+	  					<br>File "stdin", line 1, in module
+								<br>IndexError: list assignment index out of range
+					</div>
+				</p>
+
+				<p><strong>pop()</strong> ইন্ডেক্স এর ভিত্তিতে কাজ করে | মেথডে সরাসরি ইন্ডেক্স পাস করতে হয় |ইন্ডেক্স পাস করার
+					পর যদি সে লিস্টে ওই ইন্ডেক্স পায় তাহলে মুল লিস্ট থেকে ইন্ডেক্সটির ভেলুটি মুছে দেয় এবং তা রিটার্ন করে , অন্যথায় IndexError থ্রো করে |
+					<div class="code">
+							 a = [3, 2, 4, 1]
+							<br> print(pop(1))
+							<br>output:2
+							<br> print(a)
+							<br>output:[3, 4, 1]
+							<br>
+							<br>pop a[7]
+							<br>Traceback (most recent call last):
+	  					<br>File "stdin", line 1, in module
+								<br>IndexError: pop index out of range
+					</div>
+				</p>
+
+		</div>
+
+
+			<div class="columnn2">
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+				<h2>Recent Posts</h2>
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/post_details'%}">স্ট্রিং মেথডস</a></li>
+					<li><a href="{%url 'blog/post_details2'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/post_details3'%}">Django ORM</a></li>
+					<li><a href="{%url 'blog/post_details4'%}">GIT Control</a></li>
+					<li><a href="{%url 'blog/post_details5'%}">বিল্ট ইন ফাংশন</a></li>
+
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>

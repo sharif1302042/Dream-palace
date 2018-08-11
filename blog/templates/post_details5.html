@@ -1,0 +1,169 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h5>
+	</div>
+	<div class="menubar">
+		<a href="{%url 'blog/home'%}">Home</a>
+		<a href="#">Sports</a>
+		<a href="#">National</a>
+		<a href="#">International</a>
+		<a href="#">Politics</a>
+		<a href="#">Entertainment</a>
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h1 style="text-align: center;">বিল্ট ইন ফাংশন</h1>
+
+				<p>এই পর্বে আমরা Python এর কিছু  বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+          ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+           এবং এর সুবিশাল লাইব্রেরী |
+           <br> এবার একটু সামনের দিকে এগুনো যাক ..........
+         </p>
+         <h3 style="font-size: 25px"> abs(argument):</h3>
+         <p>এই ফাংশন একটা আর্গুমেন্ট নেয় , সেটা হতে পারে ইন্টিজার,ফ্লোট বা কোন জটিল সংখ্য এবং তার Absolute ভেলু এবং
+           জটিল সংখ্যার ক্ষেত্রে তার Magnitude রিটার্ন করে |
+           <div class="code">
+             integer = -20
+            <br>print('Absolute value of -20 is:', abs(integer))
+
+            <br><br>floating = -30.33
+            <br>print('Absolute value of -30.33 is:', abs(floating))
+
+            <br><br>complex = (3 - 4j)
+            <br>print('Magnitude of 3 - 4j is:', abs(complex))
+            <br><br>Output:
+            <br>Absolute value of -20 is: 20
+            <br>Absolute value of -30.33 is: 30.33
+            <br>Magnitude of 3 - 4j is: 5.0
+           </div>
+          </p>
+
+					<h3 style="font-size: 25px"> bin(argument):</h3>
+          <p>এই ফাংশনের মাধ্যমে কোন ইন্টিজার নাম্বার কে বাইনারি স্ট্রিং এ কনভার্ট করা হয় | উল্লেখ্য সামনে '0b' প্রিফিক্স যোগ করে |
+						এই প্রিফিক্সটা বাদ দেয়ার জন্য <strong>Format()</strong>  মেথড ব্যবহার করতে হয় |
+
+
+            <div class="code">
+	              >>>bin(3)
+	             	<br>'0b11'
+							 	<br>>>>bin(-10)
+								<br>'-0b1010'
+
+             <br><br>>>>format(14, '#b'), format(14, 'b')
+             <br>('0b1110', '1110')
+            </div>
+           </p>
+					 <p>একইভাবে <strong>hex()</strong>ও <strong>oct()</strong> মেথডও কাজ করে |
+						 <strong>hex()</strong> সামনে '0x'  প্রিফিক্স যোগ করে এবং
+						 <strong>oct()</strong> সামনে  '0o' প্রিফিক্স যোগ করে |
+						 <div class="code">
+ 	              >>>hex(255)
+ 	             	<br>'0xff'
+ 							 	<br>>>>oct(8)
+ 								<br>'0o10'
+								<br><br>>>>format(255, '#x'), format(255, 'x'), format(255, 'X')
+								<br>('0xff', 'ff', 'FF')
+
+	              <br><br>>>>format(10, '#o'), format(10, 'o')
+	              <br>('0o12', '12')
+             </div>
+				 		</p>
+
+						<h3 style="font-size: 25px"> format():</h3>
+	          <p>এই মেথডের মাধ্যমে কোন একটা ভেলুর ফরমেট স্পেছিফায়ার এর সাহায্যে ফরমেটেড রিপ্রেসেন্টেশন করা হয় |
+এক কথায় বলা যায় কোন একটা ভেলুকে সাজানো হয় , সেটা ডেভেলপার যেভাবে চায় |
+
+
+
+	            <div class="code">
+		              >>>bin(3)
+		             	<br>'0b11'
+								 	<br>>>>bin(-10)
+									<br>'-0b1010'
+
+	             <br><br>>>>format(14, '#b'), format(14, 'b')
+	             <br>('0b1110', '1110')
+	            </div>
+	           </p>
+
+
+
+
+
+			</div>
+			<div class="columnn2">
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+				<h2>Recent Posts</h2>
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/post_details'%}">স্ট্রিং মেথডস</a></li>
+					<li><a href="{%url 'blog/post_details2'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/post_details3'%}">Django ORM</a></li>
+					<li><a href="{%url 'blog/post_details4'%}">GIT Control</a></li>
+					<li><a href="{%url 'blog/post_details5'%}">বিল্ট ইন ফাংশন</a></li>
+
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>

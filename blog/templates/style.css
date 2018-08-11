@@ -1,0 +1,154 @@
+html{
+	background-color: #e6e6e6;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: auto;
+	width: 80%;
+	margin-top: .5%;
+	margin-left: 10%;
+	background-color: white;
+}
+
+.header{
+	height: 120px;
+	width: 100%;
+	background-color: white;
+}
+.header h1{
+	padding-top: 3%;
+	padding-left: 2%;
+	color: #585858;
+	font-family: 'Lobster', cursive;
+}
+h5{
+	padding-left: 2%;
+	color: #585858;
+}
+
+
+.menubar{
+	height: 50px;
+	width: 100%;
+	background-color: #00AA00;
+
+}
+.menubar a{
+	display: inline-block;
+	padding: 15px 15px;
+	color: white;
+	text-decoration: none;
+}
+.menubar a:hover{
+	background: #009900;
+
+}
+
+.content{
+	font-size: 15px;
+	padding-top: 40px;
+	padding-left: 10px;
+}
+
+.columnn1 {
+	float: left;
+	width: 70%;
+	padding-left: 1%;
+
+}
+.columnn1 h1{
+	font-size: 35px;
+	padding-top: 0;
+	padding-bottom: 13px;
+}
+.columnn1 p strong{
+	color: #00aa00;
+	padding-right: 10px;
+}
+.columnn1 p{
+	 font-size: 18px;
+	 padding-left: 3%;
+}
+.columnn1 p button {
+	background-color: #00aa00;
+	padding: 6px;
+	border-radius: 30px;
+	color: white;
+}
+h1 a{
+	color: #00aa00;
+}
+.code{
+	font-size: 18px;
+	background: #b6b6b6;
+	padding-left: 10%;
+
+}
+
+.post-form textarea, .post-form input {
+	padding: 10px;
+    width: 60%;
+}
+
+
+
+.columnn2 {
+	float: right;
+	width: 24%;
+	padding-right: 1%;
+	padding-left: 1%;
+}
+h2{
+	color: green;
+  	border-bottom-style: solid;
+	padding-bottom: 15px;
+}
+.columnn1 p,.columnn2 p{
+	padding-bottom: 30px;
+}
+.login a{
+	display: inline-block;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	text-decoration: none;
+}
+.login button{
+	padding: 20px;
+}
+.columnn2 ul{
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+.columnn2 ul li{
+	text-decoration: none;
+	border-bottom: 0.2px solid #b6b6b6;
+}
+.columnn2 ul li a{
+	padding: 10px;
+	text-decoration: none;
+	display: inherit;
+	color: #494949;
+}
+.columnn2 ul li:hover{
+	background-color: #dbdbdb;
+	color: white;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.footer{
+	height: 60px;
+	width: 100%;
+	background-color: #00aa00;
+
+	color: white;
+	text-align: center;
+}

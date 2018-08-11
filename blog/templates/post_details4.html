@@ -1,0 +1,98 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h5>
+	</div>
+	<div class="menubar">
+		<a href="{%url 'blog/home'%}">Home</a>
+		<a href="#">Sports</a>
+		<a href="#">National</a>
+		<a href="#">International</a>
+		<a href="#">Politics</a>
+		<a href="#">Entertainment</a>
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h1 style="text-align: center;"> GIT (version Control)</h1>
+
+        <h3 style="font-size: 25px"> Cooming Soon..............</h3>
+
+
+
+
+			</div>
+			<div class="columnn2">
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+				<h2>Recent Posts</h2>
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/post_details'%}">স্ট্রিং মেথডস</a></li>
+					<li><a href="{%url 'blog/post_details'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/post_details3'%}">Django ORM</a></li>
+          <li><a href="{%url 'blog/post_details4'%}">GIT Control</a></li>
+					<li><a href="{%url 'blog/post_details5'%}">Functions</a></li>
+
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>
