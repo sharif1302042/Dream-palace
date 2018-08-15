@@ -1,0 +1,135 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h5>
+	</div>
+	<div class="menubar">
+		<a href="{%url 'blog/home'%}">Home</a>
+		<a href="#">Sports</a>
+		<a href="#">National</a>
+		<a href="#">International</a>
+		<a href="#">Politics</a>
+		<a href="#">Entertainment</a>
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h1 style="text-align: center;"> গিটহাবে প্রজেক্ট রাখুন</h1>
+
+        <p>এর আগের পর্বে আমরা গিট ভার্সন কন্ট্রল নিয়ে মূটামুটি ধারনা পেয়েছি এই পর্বে গিটহাব নিয়ে হাল্কা পাতলা জানবো |
+          গিটহাব এক ধরনের হোস্টিং সার্ভিস প্রভাইডার যা  গিট ভার্সন কন্ট্রোল এর জন্য হোস্ট  প্রভাইড করে |
+          শুধু গিটহাবই না আরও আছে যেমন বলা যায়  গিটল্যাব, গিটবাকেট  |<br>
+
+          ধরুন আপনি একটি কোম্পানিতে কর্মরত আছেন এবং আপনারা কয়েকজন ডেভেলপার একসাথে একই প্রোজেক্ট এর কাজ করছেন ,
+					আপনাদের কাজ রেগুলার আপডেট হচ্ছে , আপনাদের সবাইকে আপডেট থাকতে হচ্ছে এই মুহূর্তে কতটা আপডেট হল ,
+					ঠিক কোন জায়গায় আপডেট হল, এক জনের কোড অন্য জনকে দেখতে হচ্ছে এই ক্ষেত্রে আমার মতে গিটহাব
+         আপনাকে অনেক সাহায্য করতে পারে |<br>
+
+         এটা একটা ওপেন সোর্স সিস্টেম | আপনি চাইলে অন্যের প্রোজেক্ট এ কন্ট্রিবিউট করতে পারেন |
+         কখনো কখনো দেখা যায় একই প্রোজেক্ট এ হাজার হাজার ডেভেলপার কন্ট্রিবিউট  করেছে |
+         গিটহাবের আরও অনেক সুবিধা রয়েছে আমাদের উদ্দেশ্য কিন্তু সুবিধা জানা না  অন্য তবুও বলা আর কি |<br>
+         তবে ছোট্ট করে বলে রাখি  অনেকের কাছেই শুনা জব ইন্টারভিউ  এর একটা কমন প্রশ্ন আপনার
+         গিটহাব কতটা সমৃদ্ব্য?
+        </p>
+
+				<h3 style="font-size: 25px">	একাউন্ট করুনঃ  </h3>
+				<p>আপনার যদি গিটহাবে একাউন্ট না থাকে তাহলে
+						  <a href="https://github.com/" style="color: red">github.com </a>
+						 থেকে আকাউন্ট করে নিন আর থাকলে তো কোন কথাই নেই | 	</p>
+
+					<h3 style="font-size: 25px">নতুন রিপোজিটরি তৈরি করুনঃ </h3>
+					<p>আপনার অ্যাকাউন্ট এর ডান পাশে  <strong>+</strong> আইকন এ ক্লিক করুন অনেকগুলা অপশন থেকে নিউ
+						 রিপোজিটরি তে ক্লিক করুন নিচের মত  একটা নতুন উইন্ডো আসবে | </p>
+						 <div class="image">
+	 							<img src="{% static 'images/github1.png'%}" alt="logo">
+	 					 </div>
+					<p>রিপোজিটরি একটা লজিকাল  নাম দিন তারপর নিচের বাকি যেই অপশন গুলো আছে
+						 সেগুলো আপাতত অভাবেই রেখে দিন | তারপর Create repository  তে ক্লিক করুন | </p>
+						 <div class="image">
+	 							<img src="{% static 'images/github2.png'%}" alt="logo">
+	 					 </div>
+
+
+
+
+
+
+
+			</div>
+			<div class="columnn2">
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+				<h2>Recent Posts</h2>
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/post_details2'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/post_details4'%}">GIT (version Control)</a></li>
+					<li><a href="{%url 'blog/post_details6'%}">উবুন্টুতে অভ্র ইন্সটল</a></li>
+					<li><a href="{%url 'blog/post_details5'%}">বিল্ট ইন ফাংশন</a></li>
+					<li><a href="{%url 'blog/post_details9'%}">Push your project on github</a></li>
+					<li><a href="{%url 'blog/post_details'%}">স্ট্রিং মেথডস</a></li>
+
+					<li><a href="{%url 'blog/post_details3'%}">Django ORM</a></li>
+					<li><a href="{%url 'blog/post_details7'%}">Web Scraping</a></li>
+					<li><a href="{%url 'blog/post_details8'%}">আপনার প্রজেক্ট ফ্রিতে হোস্ট করুন</a> </li>
+				</ul>
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>

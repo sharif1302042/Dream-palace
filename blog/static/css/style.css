@@ -77,12 +77,11 @@ h5{
 h1 a{
 	color: #00aa00;
 }
-.code{
+.columnn1 .code{
 	font-size: 18px;
 	background: #b6b6b6;
 	padding: 20px ;
 	overflow: hidden;
-
 }
 
 .post-form textarea, .post-form input {

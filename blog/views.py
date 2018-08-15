@@ -38,3 +38,10 @@ def post_details6(request):
 
 def post_details7(request):
 	return render(request, 'post_details7.html', {})
+
+
+def post_details8(request):
+	return render(request, 'post_details8.html', {})
+
+def post_details9(request):
+	return render(request, 'post_details9.html', {})
