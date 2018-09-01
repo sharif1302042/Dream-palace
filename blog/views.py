@@ -8,7 +8,7 @@ from .models import Comment
 def home(request):
 	return render(request, "blog.html", {})
 
-def post_details(request):
+def strings(request):
 	if request.method=='POST':
 		form = CommentForm(request.POST)
 		if form.is_valid():
@@ -19,29 +19,29 @@ def post_details(request):
 	else:
 		form=CommentForm()
 	cmt=Comment.objects.all()
-	return render(request, 'post_details.html', {'form':form,'cmt':cmt})
+	return render(request, 'strings.html', {'form':form,'cmt':cmt})
 
-def post_details2(request):
-	return render(request, 'post_details2.html', {})
+def list(request):
+	return render(request, 'list.html', {})
 
-def post_details3(request):
-	return render(request, 'post_details3.html', {})
+def D_ORM(request):
+	return render(request, 'D_ORM.html', {})
 
-def post_details4(request):
-	return render(request, 'post_details4.html', {})
+def GIT(request):
+	return render(request, 'GIT.html', {})
 
-def post_details5(request):
-	return render(request, 'post_details5.html', {})
+def Functions(request):
+	return render(request, 'Functions.html', {})
 
-def post_details6(request):
-	return render(request, 'post_details6.html', {})
+def Avro(request):
+	return render(request, 'Avro.html', {})
 
-def post_details7(request):
-	return render(request, 'post_details7.html', {})
+def Web_Scrapping(request):
+	return render(request, 'Web_Scrapping.html', {})
 
 
-def post_details8(request):
-	return render(request, 'post_details8.html', {})
+def Host_Project_in_pythonAnywhere(request):
+	return render(request, 'Host_Project_in_pythonAnywhere.html', {})
 
-def post_details9(request):
-	return render(request, 'post_details9.html', {})
+def github(request):
+	return render(request, 'github.html', {})
