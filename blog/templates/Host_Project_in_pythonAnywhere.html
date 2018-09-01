@@ -28,8 +28,150 @@
 		<div class="row">
 			<div class="columnn1">
 				<h1 style="text-align: center;"> আপনার প্রজেক্ট ফ্রিতে হোস্ট করুন </h1>
+						<p>pythonanywhere.com আপনাকে আপনার পাইথন প্রোজেক্ট ফ্রিতে হোস্ট করতে দেয় | আপনাকে মোট 512.0 MB ডাটা রাখতে দিবে
+							 আর আপনি যদি পেইড কাস্টমার হয়ে থাকেন তাহলে তো কোন কথাই নেই | </p>
 
-        <h3 style="font-size: 25px"> Cooming Soon..............</h3>
+							<p>PythonAnywhere এ কোন প্রজেক্ট Deploy করা PC এর লোকালহস্টে প্রোজেক্ট রান করার মতই |
+								আপনি এখানেও ভারচুয়াল ইনভাইরনমেন্ট বানাতে পারবেন,চাইলে কোড এডিট করতে পারবেন , গিটে কমিট করতে পারবেন |
+								সবচেয়ে মজার বেপার হল,Dnajgo প্রজেক্ট  লোকালহস্টে রান করার জন্য যেই কমান্ডগুলো দিতেন এখানের কমান্ডগুলোও প্রায় সেইম |
+
+							<br>তো ঝটপট  <a href="https://www.pythonanywhere.com/" style="color: red" target="_blank"> এখান </a>
+						 থেকে একাউন্ট খুলে ফেলুন ...</p>
+
+				 <h3 style="font-size: 25px">শুরু করুনঃ  </h3>
+						 <p>console এ গিয়ে Bash console  ওপেন করুন , এটা আপনার টার্মিনাল এর মতই
+							 <div class="image">
+									<img src="{% static 'images/Python1.png'%}" alt="logo">
+							 </div>
+						 </p>
+
+						 <h3 style="font-size: 25px">প্রোজেক্ট আপলোড করুনঃ </h3>
+						 <p>নিচের কমান্ড দিন | উল্লেখ্য git clone এর পরে যেই Url  টা আছে সেটা আপনি যেই প্রোজেক্ট টা
+							 pythonanywhere এ হোস্ট করতে চাচ্ছেন তার Url |
+							 <div class="code">
+									$ git clone https://github.com/myusername/myproject.git
+								</div>
+						 </p>
+
+				 <h3 style="font-size: 25px">ভারচুয়াল ইনভাইরনমেন্ট তৈরি করুন এবং Django ইন্সটল করুনঃ  </h3>
+							 <div class="code">
+								 $ mkvirtualenv --python=/usr/bin/python3.6 myvenv
+		 					 <br>(myvenv)$ pip install django
+		 					 </div>
+							 <p>
+								 বুঝতেই পারছেন আমি আমার প্রোজেক্ট এর জন্য Python3.6 ইন্সটল করেছি আপনি যেটা নিয়ে কাজ করেছেন সেটা দিবেন ,
+								  আর আমি আমার ভারচুয়াল ইনভাইরনমেন্টএর নাম দিয়েছি myvenv, আপনার পছন্দ মত আপনি যেকোনো নাম দিন যদু,মদু  ইত্যাদি |
+								 তারপর Django ইন্সটল করার জন্য পরবর্তী কমান্ডটি দিয়েছি |
+								<br> Django ইন্সটল করতে একটু সময় লাগবে কারণ	 Django এর অনেক ছোট ছোট ফাইল থাকে তাই একটু অপেক্ষা করুন |
+								<br>ভারচুয়াল ইনভাইরনমেন্ট তৈরি করতে সমস্যা হলে অথবা <b>mkvirtualenv: command not found</b> এই এরর থ্রো
+								করলে নিচের কমান্ডগুলো দিন , তারপর Django ইন্সটল করুন |
+
+								<div class="code">
+									echo '' >> ~/.bashrc && echo 'source virtualenvwrapper.sh' >> ~/.bashrc
+									<br>source virtualenvwrapper.sh
+								</div>
+							 </p>
+
+							 <p>এরপর ফাইল  ট্যাবে  ক্লিক মারে একটু দেখে আসুন কি কি পরিবর্তন হয়েছে , কি কিছু দেখতে পেলেন ? </p>
+
+							 <h3 style="font-size: 25px"> Web app সেটাপ  করুনঃ </h3>
+							 <p>
+								 <br>Web ট্যাবে ক্লিক করুন তারপর Add a new web app এ ক্লিক করুন তারপর Next এ ক্লিক করুন অর্থাৎ
+								 <b>Web>>Add a new web app>>Next</b> অনুসরণ করুন , নিচের মত উইন্ডো আসবে  |
+								 <div class="image">
+									 <img src="{% static 'images/Python2.png'%}" alt="logo">
+								</div>
+							 </p>
+							 <p>
+								 আমরা  ম্যানুয়ালি আমাদের Web app সেটাপ করবো তাই Manual Congiration(including virtualenvs) এ ক্লিক করুন
+								 তারপর Python 3.6 এ ক্লিক করুন |
+								 <div class="image">
+									 <img src="{% static 'images/Python3.png'%}" alt="logo">
+								</div>
+							</p>
+
+							<p>
+							ওভারঅল Web app  কনফিগারেশন  এর জন্য নিচের পদ্ধতি অনুসরণ করুন
+							<b>	Web>>Add a new web app>>Manual Congiration>>Python 3.6</b> |
+							<br>এরপর  আরও কিছু সেটিংস করার জন্য একটা উইন্ডো পাবেন শুরু করে দিন ...
+							</p>
+
+					<h3 style="font-size: 25px">	virtual environment সেটাপ করুনঃ </h3>
+										<div class="image">
+											<img src="{% static 'images/Python4.png'%}" alt="logo">
+									 </div>
+									 <p>দেখতেই পাচ্ছেন আমি আমার virtual environment এর নাম পূর্বে myvenv দিয়েছিলাম এখানেও তাই দিয়েছি |
+										  আপনি আপনার virtual environment এর যেই নাম দিয়েছিলেন সেই নাম দিয়ে টিক এ ক্লিক করুন |
+									 </p>
+
+
+					<h3 style="font-size: 25px">Static ফাইলের জন্য  সেটাপ করুনঃ </h3>
+							<div class="image">
+								<img src="{% static 'images/Python5.png'%}" alt="logo">
+						 </div>
+							<p>
+								এই অংশে আমি URL হিসাবে <b>/static/ </b>দিয়েছি এবং ডিরেক্টরির পাথ হিসাবে <br>
+								<b>/home/sharifthesimple/Dream-palace/static</b>	দিয়েছি
+								<br>এখানে,
+								<br>home -> আমার  ডিরেক্টরি |
+								<br>sharifthesimple -> আমার কর্তৃক প্রদত্ত নাম |
+								<br>Dream-palace -> যেই প্রজেক্টটি হোস্ট করতে চাচ্ছি সেটা |
+								<br>static -> আমার স্ট্যাটিক  ফাইলের ডিরেক্টরি  নাম |
+
+							</p>
+
+					<h3 style="font-size: 25px"> WSGI	ফাইল কনফিগার করুনঃ </h3>
+							<div class="image">
+								<img src="{% static 'images/Python6.png'%}" alt="logo">
+						 </div>
+
+							<p>WSGI configuation file এ ক্লিক করুন ইহা আপনাকে একটি কোড এডিটর এ নিয়ে যাবে |
+								অনেকগুলো সেকশন দেখতে পাবেন, শুধুমাত্র Django সেকশন বাদে বাকি সব ডিলিট করুন |
+
+							<br> আমি আমার প্রজেক্ট এর  জন্য WSGI file  নিচের মত কনফিগার  করেছি , আপনিও একই ভাবে কনফিগার  করুন |
+								শুধুমাত্র <b>Path</b> টার ক্ষেত্রে একটু পরিবর্তন করুন আমি <b>Path</b> হিসাবে
+								<b>path = '/home/sharifthesimple/Dream-palace'</b> দিয়েছি কেন দিয়েছি সেটা এর আগেই
+								একবার ব্যাখ্যা করেছি এখানে তাই আর ব্যাখ্যা করার প্রয়োজন বোধ করছি না |
+							</p>
+								<div class="image">
+									<img src="{% static 'images/Python7.png'%}" alt="logo">
+							 </div>
+							<p>তারপর আপনার URL এ ক্লিক করুন |
+								সব ঠিকঠাক থাকলে আশা করি আপনার প্রোজেক্ট অনলাইনে হোস্ট হয়েছে আলহামদুলিল্লাহ | </p>
+
+					<h3 style="font-size: 25px">	কিছু সমস্যাঃ </h3>
+							<p>
+								মাঝে মাঝে দেখা যায় আপনার প্রোজেক্ট এর জন্য যেই স্ট্যাটিক ফাইলগুলো
+								 ছিল তা লোড হচ্ছেনা তখন স্ট্যাটিক ফাইল লোড করার জন্য Bash console  এ  নিচের কমান্ড দিন |
+							</p>
+							<div class="code">
+							$ python manage.py collectstatic
+							</div>
+							<p>
+								<br>
+							   Disallowed Host নামে 	আরো একটি কমন এরর দেখা যায় |
+								 আপনি যদি আপনার হোস্ট উল্লেখ না করেন তাহলে এই এরর দেখাবে |
+								 তাই যেহেতু আপনি Pythonanywhere.com কে  হোস্ট বানাচ্ছেন তাই settings.py  ফাইলে
+								 হোস্ট হিসাবে Pythonanywhere.com সেট করুন |
+							</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
