@@ -8,7 +8,7 @@ urlpatterns = [
     path('D_ORM/', views.D_ORM, name='blog/D_ORM'),
     path('GIT/', views.GIT, name='blog/GIT'),
     path('Functions/', views.Functions, name='blog/Functions'),
-    path('Functions2/', views.Functions2, name='blog/built_in_function_2'),
+    path('Functions2/', views.Functions2, name='blog/Functions2'),
 
     path('Avro/', views.Avro, name='blog/Avro'),
     path('Web_Scrapping/', views.Web_Scrapping, name='blog/Web_Scrapping'),
