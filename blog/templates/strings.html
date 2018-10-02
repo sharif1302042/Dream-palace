@@ -10,16 +10,12 @@
 	</head>
 <body>
 	<div class="header">
-		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Notebook</a></h1>
 		<h5>powered by md shariful islam</h5>
 	</div>
 	<div class="menubar">
 		<a href="{%url 'blog/home'%}">Home</a>
-		<a href="#">Sports</a>
-		<a href="#">National</a>
-		<a href="#">International</a>
-		<a href="#">Politics</a>
-		<a href="#">Entertainment</a>
+	
 	 	<a href="#">About Us</a>
 
 
@@ -27,30 +23,169 @@
 	<div class="content">
 		<div class="row">
 			<div class="columnn1">
-				<h1 style="text-align: center;"> স্ট্রিং মেথডসঃ</h1>
-				<h3 style="font-size: 25px"> কিছু কমন স্ট্রিং মেথড ...... </h3>
-				<p><strong> s.lower(), s.upper()ঃ</strong> returns the lowercase or uppercase version of the string.</p>
+				<h1 style="text-align: center;"> স্ট্রিং অপারেশনস </h1>
+				<p>
+					এই পর্বে আমরা একটা গুরুত্বপূর্ণ ডাটা স্ট্রাকচার 'String' নিয়ে আলোচনা করবো এবং কিছু বিল্ট ইন স্ট্রিং মেথড এর সাথে পরিচিত হবো	|</p>
+				<h3 style="font-size: 25px"> স্ট্রিংএর কমন মেথডগুলো ...... </h3><br>
+					<p><strong> s.lower() , s.upper()  মেথডঃ </strong> কোন স্ট্রিং বড় হাতের অক্ষর আছে নাকি ছোট
+						হাতের অক্ষর আছে তা বের করার জন্য এই দুইটা মেথড ব্যবহার করা হয় |
+						যদি বড় হাতের হয় তাহলে True রিটার্ন করে অন্যথায় False রিটার্ন করে |
+						<div class="code">
+							string = 'SHRIF'
+							<br>print(string.isupper())
+							<br>True
 
-				<p><strong> s.strip()ঃ</strong>  returns a string with whitespace removed from the start and end.
-				</p>
+							<br>string = 'sharif'
+							<br>print(string.isupper())
+							<br>False
+						</div>
+						<p>একই ভাবে আমরা কোন স্ট্রিং এর একটি ক্যারেক্টার কেউ চেক করতে পারি |
+							<div class="code">
+								string = 'SHRIF'
+								<br>print(string[0].isupper())
+								<br>True
 
-				<p><strong> s.isalpha()/s.isdigit()/s.isspace()ঃ</strong>  tests if all the string chars are in the various character classes.</p>
+								<br>string = 'sharif'
+								<br>print(string[2].isupper())
+								<br>False
+							</div>
 
-				<p><strong> s.startswith('other'), s.endswith('other')ঃ</strong>  tests if the string starts or ends with the given other string.</p>
+						</p>
 
-				<p><strong> s.find('other')ঃ</strong>  searches for the given other string (not a regular expression) within s, and returns the first index where it begins or -1 if not found.</p>
+						<p><strong> s.isalpha() , s.isdigit() , s.isspace()  মেথডঃ </strong> কোন স্ট্রিং এর একটি ক্যারেক্টার ডিজিট কিনা , এলফাবেট কিনা ,
+							 স্পেস কিনা তা  চেক করার জন্য এই মেথড গুলো ব্যবহার করা হয় |
+						 যদি কন্ডিশন ফুলফিল করে  তাহলে True রিটার্ন করে অন্যথায় False রিটার্ন করে |
+							 <div class="code">
+ 								string = 'SHRIF'
+ 								<br>print(string[0].isalpha())
+ 								<br>True
+								<br>print(string[0].isdigit())
+ 								<br>False
+								<br>print(string[0].isspace())
+ 								<br>False
 
-				<p><strong> s.replace('old', 'new')ঃ</strong>   returns a string where all occurrences of 'old' have been replaced by 'new' string.</p>
+								<br><br>print('4'.isdigit())
+								<br>True
 
-				<p><strong> s.split('delim')ঃ</strong> returns a list of substrings separated by the given delimiter. The delimiter is not a regular expression, it's just text. 'aaa,bbb,ccc'.split(',') -> ['aaa', 'bbb', 'ccc']. As a convenient special case s.split() (with no arguments) splits on all whitespace chars.</p>
+ 							</div></p>
 
-				<p><strong> s.join(list)ঃ</strong> opposite of split(), joins the elements in the given list together using the string as the delimiter. e.g. '---'.join(['aaa', 'bbb', 'ccc']) -> aaa---bbb---ccc.</p>
+							<p><strong> find() মেথডঃ </strong>  মূলত সিনটেক্সট টা এমন <b> find(sub,start,end) </b> | স্ট্রিং এর ভিতরে কোন সাবস্ট্রিং আছে
+							 	কিনা তা চেক করার জন্য এই মেথড ব্যবহার করা হয় |
+								 স্ট্রিং এর ভিতরে যদি  সাবস্ট্রিং টি পাওয়া যায় তাহলে তার 1st
+								 ইনডেক্স টা রিটার্ন করে অন্যথায় -1 রিটার্ন করে |<br>
+								 এখানে  start এবং  end অপশনাল | start এবং  end দিয়ে বুঝানো হয় আমরা  start নামক ইনডেক্স থেকে শুরু করে end
+								  এ গিয়ে serching শেষ করবো |
+								 আর যদি উল্লেখ না করি তাহলে তা সমস্ত  স্ট্রিং জুরেই search করবে |
 
-				<p><strong>count(str, beg= 0,end=len(string))ঃ</strong> Counts how many times str occurs in string or in a substring of string if starting index beg and ending index end are given.</p>
+								 <div class="code">
+									 s= "i am the simple"
+									 <br><br>print(s.find('the'))
+									 <br>output : 5
 
-				<p><strong>find(str, beg=0 end=len(string))ঃ</strong> Determine if str occurs in string or in a substring of string if starting index beg and ending index end are given returns index if found and -1 otherwise.</p>
+								 <br><br>print(s.find('simple',5))
+									 <br>output : 9
 
-				<p><strong>replace(old, new [, max])ঃ</strong> Replaces all occurrences of old in string with new or at most max occurrences if max given.</p>
+								 <br><br>print(s.find('am',0,5))
+									 <br>output : 2
+
+								 <br><br>print(s.find('am',4,8))
+								 <br>output : -1
+
+								 </div>
+							 </p>
+
+							 <p><strong> index() মেথডঃ </strong>  মূলত সিনটেক্সট টা এমন <b> str.index(str, beg, end)</b> মোটামুটি
+								 <strong> find() </strong> মেথড এর মতই কাজ করে |
+								 পার্থক্য হল যার জন্য search করা হচ্ছে তাকে না পেলে <strong> find() </strong>  মেথড  -1 রিটার্ন করে অন্যদিকে
+								 <strong> index()</strong> মেথড এক্সেপশন থ্রো করে |
+								 <div class="code">
+									s= "i am the simple"
+									<br><br>print(s.index('the'))
+									<br>output : 5
+
+								<br><br>print(s.index('simple',5))
+									<br>output : 9
+
+								<br><br>print(s.index('am',4,8))
+								<br>output : Traceback (most recent call last):
+  								<br>File "/home/sharif/Documents/python code/test.py", line 2, in <module>
+    								<br>print(s.index('am',4,8))
+										<br>ValueError: substring not found
+
+								</div>
+							</p>
+
+							<p><strong>str.count(str, beg, end) মেথডঃ </strong> 	এটাও মোটামুটি <strong> find() </strong>
+								 মেথড  এর মতই কাজ করে | মুল স্ট্রিং এর ভিতরে সাবস্ট্রিংটি  কতবার আছে তা রিটার্ন করে |
+
+								 <div class="code">
+									 s="i am the simple man and i am honest"
+								 <br><br>print(s.count('am'))
+								 <br>output : 2
+
+							 <br><br>print(s.count('am',5,35))
+								 <br>output : 1
+
+							 <br><br>print(s.count('am',4,8))
+							 <br>output : 0
+
+							 </div>
+
+
+							</p>
+
+
+
+							 <p><strong> replace() মেথডঃ </strong>  মূলত সিনটেক্সট টা এমন <b> string.replace
+								 (old, new, count)</b> |
+								 এখানে <b>old</b> দিয়ে বোঝানো হচ্ছে কোন  সাবস্ট্রিং টা রিপ্লেস করতে চাচ্ছি এবং <b>new</b> দিয়ে বোঝানো হচ্ছে আমারা যাকে
+								 দিয়ে রিপ্লেস করবো এবং <b>count</b> অপশনাল | যদি count উল্লেখ করা হয় তাহলে তা  |
+								 আর যদি উল্লেখ না করি তাহলে তা সমস্ত স্ট্রিং জুরেই search করবে এবং রিপ্লেস করবো |
+								 <div class="code">
+									 s="i am the simple man and i am honest"
+
+									 <br><br>print(s.replace('am','was'))
+									  <br>output : i was the simple man and i was honest
+
+								 <br><br>print(s.replace('am','was',1))
+								  <br>output : i was the simple man and i am honest
+
+								 <br><br>print(s.replace('am','was',2))
+								  <br>output : i was the simple man and i was honest
+
+								 </div>
+							 </p>
+
+							 <p><strong> s.split('delim') মেথডঃ</strong> এই মেথডের বহুবিধ ব্যবহার রয়েছে |
+								 কোন স্ট্রিং এর প্রতিটা substirng কে একেকটা লিস্ট আইটেম এ পরিণত করা যায় |
+
+								 <div class="code">
+									 s="i am the simple man and i am  the honest"
+
+									 <br><br>print(s.split())
+									  <br>output : ['i', 'am', 'the', 'simple', 'man', 'and', 'i', 'am', 'the', 'honest']
+								 </div>
+							 </p>
+
+							<p><strong> Join() মেথডঃ </strong> split() মেথড  দিয়ে  যেমন  কোন   কে  স্ট্রিং এর প্রতিটা substirng কে একেকটা লিস্ট আইটেম এ
+								পরিণত করা যায়  ঠিক  তেমনি  <strong> join() </strong> মেথড  দিয়ে  কোন  লিস্ট  এর   প্রত্যেক  টি আইটেমকে  একসাথে  merge  করে
+								 String  এ  পরিণত  করা  যায়  |
+								 <div class="code">
+									 s=['i', 'am', 'the', 'simple', 'man', 'and', 'i', 'am', 'the', 'honest']
+
+									 <br><br>print(' '.join(s))
+									  <br>output : i am the simple man and i am  the honest
+
+				 						<br><br>print('_'.join(s))
+									  <br>output : i_am_the_simple_man_and_i_am_the_honest
+								 </div>
+							</p>
+
+							<p><strong> s.strip() মেথডঃ </strong>  returns a string with whitespace removed from
+								the start and end.
+							</p>
+
+
 
 				<h2 style="text-align: center;">All Comments</h2><br>
 

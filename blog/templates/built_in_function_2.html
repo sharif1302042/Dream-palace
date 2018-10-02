@@ -1,0 +1,201 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+	</head>
+<body>
+	<div class="header">
+		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
+		<h5>powered by md shariful islam</h5>
+	</div>
+	<div class="menubar">
+		<a href="{%url 'blog/home'%}">Home</a>
+
+	 	<a href="#">About Us</a>
+
+
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="columnn1">
+				<h1 style="text-align: center;">বিল্ট ইন ফাংশন  পার্ট  ২ </h1>
+
+				<p>এই পর্বে আমরা Python এর কিছু  বিল্ট ইন ফাংশন এর এর সাথে পরিচিত হবো | Python যতই দিন যাচ্ছে
+				  ততই জনপ্রিয় হচ্ছে এর অনেক গুলো কারন এর মাঝে যেই দুইটা সবার আগে আসে তা হল এর সহজবোদ্ধতা
+				   এবং এর সুবিশাল লাইব্রেরী |
+				   <br> এবার একটু সামনের দিকে এগুনো যাক ..........
+				 </p>
+
+				<h3 style="font-size: 25px"> map():</h3>
+					 <p> মূলত  এই  মেথডের  সিনটেক্সট টা এমন <b>  map(function,iterable1, iterable2,....) </b>|
+
+						 <br> মূলত  এই  মেথডে  একটা  ফাংশনের  ভিতর  দিয়ে  এক  বা  একাধিক  ইটারেবল  পাস  করা  হয়  এবং
+						  এই  ইটারেবল এর  উপর  ফাংশনটি apply  করা হয়  |
+						   কিছু example  দেখলে  বিষয় গুলো  আরো পরিষ্কার হবে  ,
+
+					   <div class="code">
+							def squre(n):
+						<br > >>>return n*n
+
+						<br><br>s=[1,2,3,4,5]
+						<br>print(list(map(squre,s)))
+						<br>Output : [1, 4, 9, 16, 25, 36]
+
+						<br><br>num1 = [4, 5, 6]
+						<br>num2 = [5, 6, 7]
+						<br>result = map(lambda n1, n2: n1+n2, num1, num2)
+						<br>print(list(result))
+						<br>Output : [9, 11, 13]
+
+					   </div>
+				</p>
+
+				<h3 style="font-size: 25px"> filter():</h3>
+          			<p> নাম  থেকেই বোঝা যাচ্ছে এর কাজ ফিল্টারিং করা |  এর  সিনটেক্স এবং  কাজের ধরন  অনেকটাই  map() মেথডের  মতই  |
+						কিছু  কন্ডিশন এর উপর ভিত্তি করে ইটারেবল গুলোর  উপর ফিল্টারিং এপ্লাই করা |
+
+
+					<div class="code">
+						  	num=[1,-2,3,4,5,-10]
+
+							<br>def positive(n):
+    						<br>>>>if n>=0:
+        					<br>>>>return n
+							<br><br> print(list(filter(positive,num)))
+							<br>Output: [1, 3, 4, 5]
+
+					</div>
+           			</p>
+
+					 <p>  নিচের example  টি একটি নাম্বার  জোড়  কিনা  তা চেক করবে |
+						 <div class="code">
+							def even(n):
+    						<br>>>>if n%2==0:
+        					<br>>>>return n
+
+							<br><br> print(list(filter(even,num)))
+							<br>Output: [-2,4,10]
+							</div>
+
+
+				</p>
+
+				<h3 style="font-size: 25px"> reversed():</h3>
+					<p>এই মেথডের মাধ্যমে কোন একটা  লিস্ট  এর  আইটেম  গুলোকে  রিভারস করা যায় |
+						<div class="code">
+							lst=[1,2,3,10,5,6]
+							<br>print(list(reversed(lst)))
+							<br><br>Output: [6, 5, 10, 3, 2, 1]
+
+
+						</div>
+
+							</p>
+
+							<p>একই ভাবে একটা  স্ট্রিং এর  আইটেম  গুলোকে  রিভারস করতে  পারি |
+									<div class="code">
+										s = 'Python'
+										<br>print(list(reversed(s)))
+										<br><br>Output: ['n', 'o', 'h', 't', 'y', 'P']
+									</div>
+						</p>
+
+				<h3 style="font-size: 25px"> sorted():</h3>
+
+						<p>এই মেথডের মাধ্যমে কোন একটা  লিস্ট  এর  আইটেম  গুলোকে  sort করা যায়  সেটা , ছোট থেকে বড় বা বড় থেকে ছোট  যেকোন
+							  ভাবে হতে পারে |
+						<br> ছোট থেকে বড়  ভাবে  সাজানোর  জন্য  নিচের  মত  করে  কোড লিখা যায়  |
+							<div class="code">
+								lst=[1,2,3,10,5,6]
+								<br>print(sorted(lst))
+
+								<br><br>Output: [1, 2, 3, 5, 6, 10]
+
+
+					</div>
+
+				<p>
+						<br> একই ভাবে বড় থেকে ছোট  ভাবে  সাজানোর  জন্য  নিচের  মত  করে  কোড লিখা যায়  |
+							<div class="code">
+								lst=[1,2,3,10,5,6]
+								<br>print(sorted(lst,reverse=True))
+
+								<br><br>Output: [10, 6, 5, 3, 2, 1]
+
+
+					</div>
+
+
+
+			</div>
+
+			<div class="columnn2">
+				<h2>Follow Us</h2>
+				<div class="login">
+					<a href=""><button type="button">Login</button></a>
+					<a href=""><button type="button">Sign Up</button></a>
+				</div>
+
+				<h2>Recent Posts</h2>
+				<ul style="list-style: none">
+					<li><a href="{%url 'blog/list'%}">লিস্ট অপারেশনস</a></li>
+					<li><a href="{%url 'blog/GIT'%}">GIT (version Control)</a></li>
+					<li><a href="{%url 'blog/Avro'%}">উবুন্টুতে অভ্র ইন্সটল</a></li>
+					<li><a href="{%url 'blog/Functions'%}">বিল্ট ইন ফাংশন</a></li>
+					<li><a href="{%url 'blog/github'%}"> গিটহাবে প্রজেক্ট রাখুন</a></li>
+					<li><a href="{%url 'blog/strings'%}">স্ট্রিং মেথডস</a></li>
+
+					<li><a href="{%url 'blog/D_ORM'%}">Django ORM</a></li>
+					<li><a href="{%url 'blog/Web_Scrapping'%}">Web Scraping</a></li>
+					<li><a href="{%url 'blog/Host_Project_in_pythonAnywhere'%}">আপনার প্রজেক্ট ফ্রিতে হোস্ট করুন</a> </li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Categories</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">Programming</a></li>
+				 	<li><a href="#news">Web Scraping</a></li>
+				  	<li><a href="#contact">Basic Python</a></li>
+				  	<li><a href="#about">Competetive Python</a></li>
+				  	<li><a href="#home">Django</a></li>
+				 	<li><a href="#news">Django Model</a></li>
+				  	<li><a href="#contact">HTML</a></li>
+				  	<li><a href="#about">CSS</a></li>
+
+				</ul>
+
+				<h2 style="padding-top: 25px">Archives</h2>
+				<ul style="list-style: none">
+
+				  	<li><a href="#home">January</a></li>
+				 	<li><a href="#news">February</a></li>
+				  	<li><a href="#contact">March</a></li>
+				  	<li><a href="#about">April</a></li>
+				  	<li><a href="#home">May</a></li>
+				 	<li><a href="#news">June</a></li>
+				  	<li><a href="#contact">July</a></li>
+				  	<li><a href="#contact">August</a></li>
+				  	<li><a href="#about">September</a></li>
+				  	<li><a href="#about">October</a></li>
+				  	<li><a href="#about">November</a></li>
+				  	<li><a href="#about">December</a></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+
+	</div>
+
+</body>
+</html>

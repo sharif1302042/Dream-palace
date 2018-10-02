@@ -12,16 +12,22 @@ body{
 }
 
 .header{
-	height: 120px;
+	height: 150px;
 	width: 100%;
 	background-color: white;
 }
 .header h1{
+	font-size: 70px;
 	padding-top: 3%;
 	padding-left: 2%;
 	color: #585858;
 	font-family: 'Lobster', cursive;
 }
+.header h1 a {
+
+
+}
+
 h5{
 	padding-left: 2%;
 	color: #585858;
@@ -32,13 +38,14 @@ h5{
 }
 
 .menubar{
-	padding-left: 10%;
-	width: 100%;
+	padding-left: 5%;
+
 	background-color: #00AA00;
 }
 .menubar a{
 	display: inline-block;
-	padding: 10px 15px;
+	padding: 20px 15px;
+	font-size: 25px;
 	color: white;
 	text-decoration: none;
 }
@@ -124,6 +131,8 @@ h2{
 }
 .columnn2 ul li a{
 	padding: 10px;
+	font-size: 20px;
+
 	text-decoration: none;
 	display: inherit;
 	color: #494949;

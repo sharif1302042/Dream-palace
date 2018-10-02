@@ -15,7 +15,7 @@ def strings(request):
 			post=form.save(commit=False)
 			post.published_date = timezone.now()
 			post.save()
-			return redirect('blog/post_details')
+			return redirect('blog/ strings')
 	else:
 		form=CommentForm()
 	cmt=Comment.objects.all()
@@ -32,6 +32,9 @@ def GIT(request):
 
 def Functions(request):
 	return render(request, 'Functions.html', {})
+
+def Functions2(request):
+	return render(request, 'built_in_function_2.html', {})
 
 def Avro(request):
 	return render(request, 'Avro.html', {})
