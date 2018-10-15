@@ -1,2 +1,4 @@
 # Dream-palace
-python,django,html,css
+This is a personal blog site.
+For the Backend i use Django and for the front end i use HTML and CSS.
+
