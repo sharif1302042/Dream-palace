@@ -10,20 +10,21 @@
 	</head>
 <body>
 	<div class="header">
-		<h1><a href="{%url 'blog/home'%}"> Sharif's Blog</a></h1>
-		<h5>powered by md shariful islam</h5>
-	</div>
-	<div class="menubar">
-		<a href="{%url 'blog/home'%}">Home</a>
-		<a href="#">Sports</a>
-		<a href="#">National</a>
-		<a href="#">International</a>
-		<a href="#">Politics</a>
-		<a href="#">Entertainment</a>
-	 	<a href="#">About Us</a>
+				<div class="head-col1">
+					<h1><a href="{%url 'blog/home'%}"> Sharif's Notebook</a></h1>
+					<h4 style="color: yellow">Powered By Md. Shariful Islam</h4>
+				</div>
 
+				<div class="head-col2">
 
-	</div>
+					<div class="login">
+ 					 <a href=""><button type="button">Login</button></a>
+ 					 <a href=""><button type="button">Sign Up</button></a>
+ 				 </div>
+				</div>
+
+		</div>
+
 	<div class="content">
 		<div class="row">
 			<div class="columnn1">
@@ -178,11 +179,7 @@
 
 			</div>
 			<div class="columnn2">
-				<h2>Follow Us</h2>
-				<div class="login">
-					<a href=""><button type="button">Login</button></a>
-					<a href=""><button type="button">Sign Up</button></a>
-				</div>
+			
 
 				<h2>Recent Posts</h2>
 				<ul style="list-style: none">
@@ -235,7 +232,42 @@
 		</div>
 	</div>
 	<div class="footer">
-		<span>my blog site<br>Copyright &copy; 2018-3010 </span>
+			<div class="col1">
+				<img src="{% static 'images/me1.png'%}" alt="logo">
+
+			</div>
+
+			<div class="col2">
+				<h2>Design And Developed </h2>
+				<h2>BY:</h2>
+				<h1>Md. Shariful Islam</h1>
+
+			</div>
+
+			<div class="col3">
+					<h2>About Me</h2>
+					<ul>
+						<li><a href="#">Full Stack developer</a></li>
+						<li><a href="#">Blogger</a></li>
+						<li><a href="#">Open source Contributor</a></li>
+						<li><a href="#">Skills</a></li>
+
+
+					</ul>
+
+			</div>
+			<div class="col4">
+				<h2>Contact Me</h2>
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Github</a></li>
+					<li><a href="#">Linked in</a></li>
+					<li><a href="#">Quora</a></li>
+
+
+				</ul>
+
+			</div>
 
 	</div>
 

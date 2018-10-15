@@ -10,23 +10,60 @@ body{
 	width: 100%;
 	background-color: white;
 }
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
 
 .header{
-	height: 150px;
-	width: 100%;
-	background-color: white;
+	min-height: 150px;
+	max-height: 30%;
+  padding: 15px;
+  overflow: hidden;
+  background-color: #00aa00;
 }
-.header h1{
+
+.head-col1{
+  width: 60%;
+  float: left;
+  overflow: hidden;
+}
+.head-col1{
+font-size: 25px;
+padding-top: 2%;
+padding-left: 2%;
+padding-right: 3%;
+}
+.head-col2{
+  width: 20%;
+		padding-top: 5%;
+  float: right;
+}
+
+.head-col2 ul li{
+	padding: 10px;
+	font-size: 20px;
+	list-style: none;
+
+}
+.head-col2 ul li a{
+	text-decoration: none;
+}
+.head-col2 ul li:hover{
+	background-color: #dbdbdb;
+	color: white;
+}
+
+.header h1 a{
 	font-size: 70px;
 	padding-top: 3%;
 	padding-left: 2%;
-	color: #585858;
+	color: Black;
 	font-family: 'Lobster', cursive;
 }
-.header h1 a {
 
-
-}
 
 h5{
 	padding-left: 2%;
@@ -81,9 +118,7 @@ h5{
 	border-radius: 30px;
 	color: white;
 }
-h1 a{
-	color: #00aa00;
-}
+
 .columnn1 .code{
 	font-size: 18px;
 	background: #b6b6b6;
@@ -104,7 +139,7 @@ h1 a{
 	padding-right: 1%;
 	padding-left: 1%;
 }
-h2{
+.columnn2 h2{
 	color: green;
   	border-bottom-style: solid;
 	padding-bottom: 15px;
@@ -119,7 +154,8 @@ h2{
 	text-decoration: none;
 }
 .login button{
-	padding: 20px;
+	font-size: 15px;
+	padding: 20px 35px;
 }
 .columnn2 ul{
 	padding-top: 20px;
@@ -143,17 +179,46 @@ h2{
 
 }
 
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.footer{
-	height: 60px;
-	width: 100%;
-	background-color: #00aa00;
 
+            /***fotter**/
+.footer {
+  padding-top: 5%;
+  padding-left: 5%;
+	height: 200px;
+	background-color: Black;
 	color: white;
-	text-align: center;
+
+}
+
+
+.col1{
+  float: left;
+  margin-left: 10px;
+  width: 15%;
+}
+.col1 img{
+  border-radius: 30px;
+	height: 150px;
+  width: 150px;
+}
+
+.col2{
+
+  float: left;
+  padding: 5px;
+  width: 30%;
+}
+.col3{
+  float: left;
+  padding: 5px;
+  width: 20%;
+}
+.col4{
+  float: left;
+  padding: 5px;
+  width: 20%;
+}
+.footer ul li a{
+  color: yellow;
+  padding: 5px;
 }
